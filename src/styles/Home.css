@@ -1,0 +1,190 @@
+/* General Styles */
+.home-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #001f3f, #003366, #004080, #ffffff);
+    color: white;
+    transition: background 0.5s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards, slideDown 1s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.2s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.nav-links a:hover {
+    color: #66c2ff;
+    transform: scale(1.1);
+}
+
+/* Title and Description */
+.home-title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.home-description {
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.app-purpose {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.app-purpose h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.app-purpose p {
+    font-size: 16px;
+    color: #d0d2ee;
+    line-height: 1.6;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s, background 0.3s;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Image and Text */
+.text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.text p {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    opacity: 0;
+    animation: fadeIn 1.7s ease-in-out forwards;
+}
+
+/* Image Styling */
+.home-image {
+    width: 450px;
+    height: 280px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s, filter 0.3s;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.home-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+    filter: brightness(1.2) grayscale(20%);
+}
+
+/* Button */
+.home-button {
+    padding: 16px 32px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards, pulse 2s infinite;
+}
+
+.home-button:hover {
+    background: #cc5200;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,207 @@
+/* General Page Styling */
+.events-page {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #001f3f, #002855, #003366, #ffffff);
+    color: navy;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Event Title */
+.events-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #9aaecb;
+}
+
+/* Add Event Button */
+.add-event-btn {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.add-event-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Events Container */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Event Card Styling */
+.event-card {
+    width: 45%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternating Card Positions */
+.event-card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.event-card:nth-child(even) {
+    align-self: flex-end;
+}
+
+/* Card Background Color Variations */
+.event-card:nth-child(3n) {
+    background: linear-gradient(135deg, #f7f7f7, #dfe9f3);
+}
+
+.event-card:nth-child(4n) {
+    background: linear-gradient(135deg, #ddeeff, #b0c4de);
+}
+
+/* Event Image */
+.event-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+/* Event Details */
+.event-details {
+    text-align: left;
+    flex-grow: 1;
+}
+
+/* Popup Form */
+.popup-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.submit-btn,
+.close-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn {
+    background: #28a745;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.close-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.close-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Hover Effect for Event Buttons */
+.edit-btn {
+    background: #b2bfde;
+    color: black;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background: #9aaecb;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
